@@ -24,7 +24,7 @@ const Signup = ({setIsUserLoggedin}) => {
   // register user function
   const register = (user)=>{
     user.fullName&&user.email&&user.password?
-    axios.post("http://localhost:3009/user/signup",user)
+    axios.post("https://my-blogs-backend.vercel.app/user/signup",user)
     .then(res=>{
       alert(res.data.message);
       localStorage.setItem("blogUser",JSON.stringify(res.data.user))

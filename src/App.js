@@ -31,7 +31,7 @@ function App() {
   useEffect(()=>{
     if(token){
       // get user data
-      axios.post(`http://localhost:3009/user/get-user`,{token})
+      axios.post(`https://my-blogs-backend.vercel.app/user/get-user`,{token})
       .then(res=>{
         setIsUserLoggedin(true)
         dispatch(userData(
@@ -46,7 +46,7 @@ function App() {
     }
 
     // get blogs
-    axios.get(`http://localhost:3009/blog`)
+    axios.get(`https://my-blogs-backend.vercel.app/blog`)
     .then((res) => {
       setBlogs(res.data)
       res?.data?.map(blog=> dispatch(allBlogs(blog._id,blog.userId,blog.userName,blog.title,blog.image,blog.content,blog.date,blog.comments)))

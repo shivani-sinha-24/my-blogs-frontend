@@ -25,7 +25,7 @@ const Login = ({ setIsUserLoggedin }) => {
   // user login fuction
   const login = (user) => {
     user.email && user.password
-      ? axios.post("http://localhost:3009/user/login", user).then((res) => {
+      ? axios.post("https://my-blogs-backend.vercel.app/user/login", user).then((res) => {
           if (res.status === 201) {
             alert(res.data.message);
             localStorage.setItem("blogUser", JSON.stringify(res.data.user));
