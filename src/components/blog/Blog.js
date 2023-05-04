@@ -7,7 +7,7 @@ const Blog = ({isUserLoggedin,title,image,id,date,content}) => {
   return (
     <div className="card blog-enlarge m-4 all-side-shadow" style={{width: "20rem",height:"fit-content"}}>
         {image &&
-          <img src={`http://localhost:3009/uploads/${image}`} className="card-img-top" alt="..."/>
+          <img src={`https://my-blogs-backend-eo37vi84j-shivani-sinha-24.vercel.app/uploads/${image}`} className="card-img-top" alt="..."/>
         }
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
