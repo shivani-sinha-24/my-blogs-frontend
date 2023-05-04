@@ -14,7 +14,7 @@ const BlogPage = ({reload,setReload,isUserLoggedin}) => {
   const [blog,setBlog] = useState({})
   
   useEffect(()=>{
-    axios.get(`https://my-blogs-backend.vercel.app/blog/${blogId}`)
+    axios.get(`https://my-blogs-backend-j48v7tphh-shivani-sinha-24.vercel.app/blog/${blogId}`)
     .then(res=>{
       console.log(res.data);
       setBlog(res.data);
@@ -34,7 +34,7 @@ const BlogPage = ({reload,setReload,isUserLoggedin}) => {
   const addCmnt= () =>{
     setReload(false);
     if (comntInput) {
-      axios.post(`https://my-blogs-backend.vercel.app/blog/add-comment`, blogDetail)
+      axios.post(`https://my-blogs-backend-j48v7tphh-shivani-sinha-24.vercel.app/blog/add-comment`, blogDetail)
       .then((res) => {
         setComments(res.data);
         setReload(true);
@@ -55,7 +55,7 @@ const BlogPage = ({reload,setReload,isUserLoggedin}) => {
       <div className="card-bottom">
       <div className="card-body text-center">   
         <div className="text-center">
-          {blog?.image&&<img src={`https://my-blogs-backend.vercel.app/uploads/${blog?.image}`} className="card-img-top blog-image" alt="..."/>}
+          {blog?.image&&<img src={`https://my-blogs-backend-j48v7tphh-shivani-sinha-24.vercel.app/uploads/${blog?.image}`} className="card-img-top blog-image" alt="..."/>}
         </div>
         <p className="card-text text-start">{blog?.content?blog?.content:null}</p>
         <hr />
