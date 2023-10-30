@@ -19,7 +19,7 @@ const Navbar = ({isUserLoggedin,setIsUserLoggedin}) => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <Link to={`/`} className="nav-link active" aria-current="page" >Home</Link>
-            <div onClick={()=>{isUserLoggedin?navigate("../create-new-blog", { replace: true }):navigate("../login", { replace: true })}} className={"nav-link "} >Create New Blog</div>
+            <div onClick={()=>{isUserLoggedin?navigate("../create-new-blog", { replace: false }):navigate("../login", { replace: true })}} className={"nav-link "} >Create New Blog</div>
             {isUserLoggedin?
               <div className="d-flex" role="search">
                   <button 
