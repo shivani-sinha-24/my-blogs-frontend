@@ -42,7 +42,7 @@ const CreateNewBlog = ({reload,setReload}) => {
         setReload(false)
         e.preventDefault();
         const config = {headers:{"Content-Type":"multipart/form-data"}}
-        await axios.post("http://localhost:3009/blog/add-blog",blogObj,config)
+        await axios.post("https://blog-be-kappa.vercel.app/blog/add-blog",blogObj,config)
         .then(res=>{
             setReload(true)
             setFile('')
